@@ -1,4 +1,6 @@
 import pymysql
+import os
+
 pymysql.install_as_MySQLdb()
 
 
@@ -17,7 +19,7 @@ SECRET_KEY = 'django-insecure-sn!=p%nl$(b-v_zzkrro5_867%ib52*%1-*n)%-nie1j0w9r1w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['BjornMoggy.pythonanywhere.com']
 
 
 # Application definition
@@ -69,10 +71,10 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'emis_db',
-        'USER': 'emis_user',
+        'NAME': 'BjornMoggy$emis_db',
+        'USER': 'BjornMoggy',
         'PASSWORD': '254Silv@',
-        'HOST': 'localhost',
+        'HOST': 'BjornMoggy.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
@@ -114,6 +116,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
