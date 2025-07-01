@@ -31,8 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',  # Your application
-    'rest_framework',  # Django REST Framework
+    'myapp', 
+    'rest_framework',  
 ]
 
 MIDDLEWARE = [
